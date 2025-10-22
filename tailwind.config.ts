@@ -52,6 +52,13 @@ export default {
           hover: "hsl(var(--widget-hover))",
         },
       },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-secondary': 'var(--gradient-secondary)',
+      },
+      boxShadow: {
+        'glow': 'var(--shadow-glow)',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

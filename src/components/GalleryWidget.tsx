@@ -41,7 +41,7 @@ const GalleryWidget = () => {
   };
 
   return (
-    <div className="bg-widget rounded-[28px] p-6 shadow-lg">
+    <div className="bg-widget/90 backdrop-blur-xl rounded-[28px] p-6 shadow-glow border border-secondary/20">
       <div className="flex items-start gap-3">
         <button className="mt-1 flex-shrink-0 text-muted-foreground hover:text-foreground transition-colors">
           <HelpCircle className="w-6 h-6" />
@@ -50,14 +50,14 @@ const GalleryWidget = () => {
         <div className="flex-1 min-w-0">
           {/* Header */}
           <div className="flex items-center justify-between mb-8">
-            <div className="bg-background rounded-full px-6 py-3">
+            <div className="bg-background/50 backdrop-blur-sm rounded-full px-6 py-3">
               <h2 className="text-lg font-semibold text-foreground">Gallery</h2>
             </div>
             
             <div className="flex items-center gap-3">
               <button
                 onClick={handleAddImage}
-                className="flex items-center gap-2 bg-secondary hover:bg-widget-hover text-foreground rounded-full px-6 py-3 text-sm font-medium transition-colors shadow-md"
+                className="flex items-center gap-2 bg-gradient-secondary hover:shadow-glow text-foreground rounded-full px-6 py-3 text-sm font-medium transition-all shadow-md"
               >
                 <Plus className="w-5 h-5" />
                 ADD IMAGE
@@ -67,14 +67,14 @@ const GalleryWidget = () => {
                 <button
                   onClick={handlePrevious}
                   disabled={currentPage === 1}
-                  className="w-11 h-11 rounded-full bg-gradient-to-br from-secondary to-widget-hover hover:from-widget-hover hover:to-secondary text-foreground flex items-center justify-center transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                  className="w-11 h-11 rounded-full bg-gradient-secondary hover:shadow-glow text-foreground flex items-center justify-center transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={handleNext}
                   disabled={currentPage === totalPages}
-                  className="w-11 h-11 rounded-full bg-gradient-to-br from-secondary to-widget-hover hover:from-widget-hover hover:to-secondary text-foreground flex items-center justify-center transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                  className="w-11 h-11 rounded-full bg-gradient-secondary hover:shadow-glow text-foreground flex items-center justify-center transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
@@ -87,7 +87,7 @@ const GalleryWidget = () => {
             {visibleImages.map((image, index) => (
               <div
                 key={startIndex + index}
-                className="aspect-square rounded-3xl overflow-hidden bg-muted hover:scale-105 transition-transform shadow-md"
+                className="aspect-square rounded-3xl overflow-hidden bg-muted hover:scale-105 hover:shadow-glow transition-all shadow-md border border-primary/10"
               >
                 <img
                   src={image}

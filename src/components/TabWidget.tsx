@@ -15,7 +15,7 @@ I was born and raised in Albany, NY& have been living in Santa Carla for the pas
   };
 
   return (
-    <div className="bg-widget rounded-[28px] p-6 shadow-lg">
+    <div className="bg-widget/90 backdrop-blur-xl rounded-[28px] p-6 shadow-glow border border-primary/20">
       <div className="flex items-start gap-3">
         <button className="mt-1 flex-shrink-0 text-muted-foreground hover:text-foreground transition-colors">
           <HelpCircle className="w-6 h-6" />
@@ -23,12 +23,12 @@ I was born and raised in Albany, NY& have been living in Santa Carla for the pas
 
         <div className="flex-1 min-w-0">
           {/* Tabs */}
-          <div className="flex gap-1 bg-background rounded-full p-1.5 mb-6">
+          <div className="flex gap-1 bg-background/50 backdrop-blur-sm rounded-full p-1.5 mb-6">
             <button
               onClick={() => setActiveTab("about")}
               className={`flex-1 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
                 activeTab === "about"
-                  ? "bg-secondary text-foreground shadow-md"
+                  ? "bg-gradient-primary text-foreground shadow-glow"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -38,7 +38,7 @@ I was born and raised in Albany, NY& have been living in Santa Carla for the pas
               onClick={() => setActiveTab("experiences")}
               className={`flex-1 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
                 activeTab === "experiences"
-                  ? "bg-secondary text-foreground shadow-md"
+                  ? "bg-gradient-primary text-foreground shadow-glow"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -48,7 +48,7 @@ I was born and raised in Albany, NY& have been living in Santa Carla for the pas
               onClick={() => setActiveTab("recommended")}
               className={`flex-1 px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
                 activeTab === "recommended"
-                  ? "bg-secondary text-foreground shadow-md"
+                  ? "bg-gradient-primary text-foreground shadow-glow"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
